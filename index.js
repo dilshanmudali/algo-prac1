@@ -96,8 +96,74 @@
 //return largest numbers in Array
 
 
-function largest(arr){
+// function largest(arr){
+//   let maxNum = []
+//   for(i=0;i<arr.length;i++){
+//     maxElem = arr[i][0]
+//     for(j=0; j<arr[i].length;j++){
+//       let currentElem = arr[i][j]
+//       if(currentElem > maxElem){
+//         maxElem = currentElem
+//       }
+//     }
+//     maxNum.push(maxElem)
+//   }
+//   return maxNum O(n^2)
+// }
+// console.log(largest([[4,5,1,3,,9],[1,5,6,9],[100,200,300,50],[10,30,21,3]]))
 
-}
-console.log(largest([]))
 
+// confirm the ending
+
+
+// function confirmEnd(str,target){
+//   if(typeof(str,target) !== 'string')return undefined
+//   let strEnd = str.slice(-1)
+//   if(strEnd === target) {
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+// console.log(confirmEnd(0, 3))
+
+
+// repeat string
+
+// function repeat(str,num){
+//   if(num<0) return ""
+//   let counter = ''
+//   for(i=0;i<num;i++){
+//     counter += str
+//   }
+//   return counter
+// }
+// console.log(repeat('faf',3))
+
+// using recursion
+
+//  function repeat(str,num){
+//  if(num < 0) return ""
+//  if(num === 1) return str
+
+//  return str + repeat(str, num -1)
+// }
+// console.log(repeat('faf',3))
+
+// truncate string
+
+
+// function truncate(str,num){
+//   if(num>= str.length) return str;
+//   if(num<=3){
+//     return str.slice(0,num) + "..."
+//   }
+//   let newStr = '' 
+//   for(let i=0;i<str.length;i++){
+//     newStr = str.slice(0,num-3)
+//   }
+
+//   return newStr + '...';
+// }
+
+// console.log(truncate('asasfwafav', 'hello'.length))
