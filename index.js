@@ -167,3 +167,184 @@
 // }
 
 // console.log(truncate('asasfwafav', 'hello'.length))
+
+
+// chunk
+
+// function chunk(arr,size){
+//   if(size <= 0) return `no`
+//   let chunkArr = []
+//   while(arr.length > 0){
+//     chunkArr.push(arr.slice(0,size))
+//     console.log(chunkArr)
+//     arr = arr.slice(size)  
+//   }
+//   return chunkArr
+// }
+// console.log(chunk(['a','b','c','d'], 1))
+
+// function chunk(arr,size){
+//   if(size <= 0) return `no`
+//   let chunkArr = []
+//   for(i=0;i<arr.length;i+=size){
+//     // console.log(chunkArr)
+//     chunkArr.push(arr.slice(i,i+size))
+//     // console.log(chunkArr)
+  
+//     // console.log(chunkArr)
+//   }
+//   return chunkArr
+// }
+// console.log(chunk(['a','b','c','d'], 3))
+
+// Slasher
+
+
+// function slash(arr,num){
+//   arr.splice(0,num)
+//   return arr;
+// }
+// console.log(slash([1,2,3],2))
+// console.log(slash([1,2,3],1))
+// console.log(slash(['dog','cat','bat'],1))
+
+// mutations
+
+// function mutate(arr){
+//  let arr1 = arr[0].toUpperCase()
+//  let arr2 = arr[1].toUpperCase()
+//  console.log(arr1,arr2)
+//    if(arr1.indexOf(arr2) === -1){
+//     return false
+//   }
+//   return true
+// }
+// console.log(mutate(["hello","hey"]))//false
+// console.log(mutate(["hello","he   o"]))
+
+// function bouncer(arr) {
+//   return arr.filter(elem => {
+//     return elem
+//   })
+// }
+
+// console.log(bouncer([7,'ate',false, 9]))
+
+
+//seek and destroy
+
+// function destroy(arr) {
+//   let args = Array.from(arguments)
+//   let target = args.slice(1)
+//   console.log(target)
+
+//   return arr.filter(e => {
+//     return !target.includes(e)
+//   })
+// }
+
+// console.log(destroy([1,2,3,1,2,3],2,3)); //[1,1]
+
+// function getIndex(arr,num){
+
+//   arr.sort(function(a,b) {
+//     return a - b 
+//   });
+
+//   for(let i=0; i<arr.length; i++){
+//     if(num <= arr[i]){
+//       return i;
+//     }
+//   }
+//   return arr.length
+// }
+
+// console.log(getIndex([3,40,10],15))
+
+// Caesars cipher
+
+
+// function chipher(str){
+//   let ciphered = ''
+
+//   for(let i=0;i<str.length;i++){
+//     let asciiNum = str[i].charCodeAt();
+//     if(asciiNum >= 65 && asciiNum <= 77){
+//       ciphered += String.fromCharCode(asciiNum + 13)
+//     }else if(asciiNum >= 78 && asciiNum <= 90){
+//     ciphered += String.fromCharCode(asciiNum - 13)
+//     }else{
+//       ciphered += str[i]
+//     }
+//   }
+//   return ciphered;
+// }
+// console.log(chipher("SERR PBQR PNZC"))
+
+// sum of all nums in range
+
+// function sumAll(arr){
+//   let start = Math.min(arr[0], arr[1])
+//   let end = Math.max(arr[0], arr[1])
+//   let total = 0;
+
+//   for(let i=start; i<=end; i++){
+//     total += i
+//   }
+//   return total
+// }
+
+// sumAll([4,1])
+
+
+// function diffArr(arr1,arr2) {
+//   let newArr =[]
+// //   for(i=0;i<=arr1.length;i++){
+// //     if(arr2.indexOf(arr1[i]) === -1){
+// //       newArr.push(arr1[i])
+// //     }
+// //   }
+// //   for(j=0;j<arr2.length;j++){
+// //     if(arr1.indexOf(arr2[j]) === -1){
+// //       newArr.push(arr2[j])
+// //     }
+// //   }
+// //   return newArr;
+// // }
+
+// console.log(diffArr([1,2,3,5],[1,2,3,4,5])) //[4]
+
+
+// function diffArr(arr1,arr2) {
+//   let combined = arr1.concat(arr2)
+//   return combined.filter(el => {
+//     if(arr1.indexOf(el) === -1 || arr2.indexOf(el) === -1){
+//       return el;
+//     }
+//   })
+// }
+
+// console.log(diffArr([1,2,3,5],[1,2,3,4,5])) //[4]
+
+// function romanize(str){
+//   let romanToNum = {
+//     X : 10,
+//     IX : 9,
+//     V : 5,
+//     IV : 4,
+//     I : 1
+//   };
+
+//   let roman = "";
+
+//   for(var key in romanToNum){
+//     // console.log(key, romanToNum[key])
+//     while(str >= romanToNum[key]){
+//       roman += key
+//       str -= romanToNum[key]
+//     }
+//   }
+//   return roman;
+// }
+
+// console.log(romanize(7))
